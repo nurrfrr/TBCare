@@ -24,12 +24,11 @@
                         <li class="nav-item"><a class="nav-link" href="{{ url('/monitor') }}">MonitorTBC</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/map') }}">CariKlinik</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-light text-primary ms-2" href="{{ url('/auth') }}">Login</a></li>
 
                         
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link btn btn-light text-primary ms-2" href="{{ url('/login') }}">Login</a>
+                                <a class="nav-link btn btn-light text-primary ms-2" href="{{ route('login') }}">Login</a>
                             </li>
                         @endguest
 
