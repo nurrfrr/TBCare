@@ -20,11 +20,28 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/tentang') }}">BelajarTBC</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/edukasi') }}">MonitorTBC</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/layanan') }}">CariKlinik</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/belajar') }}">BelajarTBC</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/monitor') }}">MonitorTBC</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/map') }}">CariKlinik</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-light text-primary ms-2" href="{{ url('/login') }}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-light text-primary ms-2" href="{{ url('/auth') }}">Login</a></li>
+
+                        
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-light text-primary ms-2" href="{{ url('/login') }}">Login</a>
+                            </li>
+                        @endguest
+
+                        @auth
+                            <li class="nav-item">
+                                <form action="{{ route('logout') }}" method="POST">
+                                     @csrf
+                                    <button class="nav-link btn btn-danger text-white ms-2" type="submit">Logout</button>
+                                </form>
+                            </li>
+                        @endauth
+
                     </ul>
                 </div>
             </div>

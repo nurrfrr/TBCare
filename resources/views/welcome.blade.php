@@ -1,13 +1,18 @@
 @extends('layout')
 
-@section('title', 'Home')
+@section('title', 'Dashboard')
 
 @section('content')
 
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
+<img src="" alt="">
+
+<!-- background-image: {{asset('img/BelajarTBC.jpeg')}}; -->
+
 <!-- 🔹 HERO SECTION / JUMBOTRON -->
-<div class="bg-light py-5 text-center" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+<div class="bg-light py-5 text-center"
+    style="background-image: img/belajarTBC.jpeg;  width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
     <div class="container py-5">
         <h1 class="display-5 fw-bold mb-4">
             Kenali, Atasi, dan Cegah <span class="text-primary">TBC</span> Bersama
@@ -32,6 +37,14 @@
 <!-- </div> -->
 
 <!-- 🔹 SECTION TITLE -->
+ @auth
+<div class="alert alert-success mt-4 shadow-sm rounded-4 p-4">
+    <h5 class="mb-2">Halo, <strong>{{ Auth::user()->username }}</strong> 👋</h5>
+    <p class="mb-3 text-muted">Senang melihat kamu kembali! Yuk cek kondisi kesehatanmu hari ini.</p>
+    <a href="{{ url('/monitor') }}" class="btn btn-success">Mulai MonitorTBC</a>
+</div>
+@endauth
+
 <h2 class="text-center mt-5 fw-bold">Mulai Langkahmu</h2>
 <p class="text-center text-muted mb-5">Eksplor fitur yang bisa kamu gunakan</p>
 
