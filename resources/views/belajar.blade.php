@@ -76,25 +76,31 @@
   </div>
 
   <!-- ====================== PENCEGAHAN TBC ====================== -->
-  <div class="row my-5">
-    <div class="col-md-4">
-      <h2 class="display-6 fw-bold text-success">Pencegahan TBC</h2>
-    </div>
-    <div class="col-md-8 d-flex flex-wrap gap-3">
-      @for ($i = 1; $i <= 5; $i++)
-        <div class="prevent-card shadow-sm p-3 rounded-4 text-center">
-          <div class="icon-circle mb-2">🛡️</div>
-          <p class="mb-0">Tips Pencegahan {{ $i }}</p>
-        </div>
-      @endfor
-    </div>
+<div class="row my-5">
+  <div class="col-md-4">
+    <h2 class="display-6 fw-bold text-success">Pencegahan TBC</h2>
   </div>
+  <div class="col-md-8 d-flex flex-wrap gap-3">
+
+    @for ($i = 1; $i <= 5; $i++)
+      <div class="prevent-card shadow-sm overflow-hidden rounded-4" style="width: 150px;">
+        <img src="{{ asset('img/pencegahan' . $i . '.jpg') }}" class="w-100" style="height: 100px; object-fit: cover;">
+        <div class="p-2 text-center">
+            <p class="mb-0 fw-semibold" style="font-size: 14px;">Tips Pencegahan {{ $i }}</p>
+        </div>
+      </div>
+    @endfor
+
+  </div>
+</div>
+
+
 
   <!-- ====================== PENGOBATAN TBC ====================== -->
   <div class="row my-5">
     <div class="col-md-8 d-flex flex-wrap gap-3 order-2 order-md-1">
       @for ($i = 1; $i <= 5; $i++)
-        <div class="prevent-card shadow-sm p-3 rounded-4 text-center">
+        <div class="prevent-card shadow-sm p-3 text-center">
           <div class="icon-circle mb-2">💊</div>
           <p class="mb-0">Metode Pengobatan {{ $i }}</p>
         </div>

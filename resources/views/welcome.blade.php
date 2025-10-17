@@ -12,16 +12,26 @@
 
 <!-- 🔹 HERO SECTION / JUMBOTRON -->
 <div class="bg-light py-5 text-center"
-    style="background-image: img/belajarTBC.jpeg;  width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+    style="background-image: url('{{ asset('img/con1.jpg') }}');
+           background-size: cover; 
+           background-position: center; 
+           background-repeat: no-repeat;
+           width: 100vw; 
+           position: relative; 
+           left: 50%; 
+           right: 50%; 
+           margin-left: -50vw; 
+           margin-right: -50vw;">
+
     <div class="container py-5">
         <h1 class="display-5 fw-bold mb-4">
-            Kenali, Atasi, dan Cegah <span class="text-primary">TBC</span> Bersama
+            Kenali, Atasi, dan Cegah <span class="text-success">TBC</span> Bersama
         </h1>
         <p class="text-center fst-italic text-muted fs-5 mx-auto col-lg-8">
             Platform ini membantu masyarakat menemukan layanan kesehatan terdekat, 
             mendapatkan edukasi seputar TBC, serta melaporkan kondisi TBC dengan mudah. 
             <br><br>
-            Bersama kita bisa melawan TBC dan meningkatkan kualitas hidup.
+            <strong>Bersama kita bisa melawan TBC dan meningkatkan kualitas hidup.</strong>
         </p>
     </div>
 </div>
